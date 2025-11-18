@@ -2,11 +2,5 @@
 Adapt = "79e6a3ab-5dfb-504d-930d-738a2a938a0e"
 CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
 CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
-GLMakie = "e9467ef8-e4e7-5192-8a1a-b1aee30e663a"
 KernelAbstractions = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
-Metal = "dde4c033-4e86-420c-a63e-0dd931031962"
 NVTX = "5da4648a-3479-48b8-97b9-01cb529c0a1f"
-Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
-
-[extras]
-CUDA_Runtime_jll = "76a88914-d11a-5bdc-97e0-2f5a05c973a2"
