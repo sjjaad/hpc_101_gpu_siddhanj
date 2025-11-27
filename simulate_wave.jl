@@ -10,6 +10,6 @@ nt = 200
 @info "Simulating wave on the CPU"
 @time simulate_wave(128; sigma, nt, gpu=false)
 
-@info "My wave simulation on the GPU"
-@time my_simulate_wave(n; sigma, nt)
+#@info "My wave simulation on the GPU"
+#@time my_simulate_wave(n; sigma, nt)
 

@@ -158,7 +158,20 @@ Given the initial conditions `p_cur` and `p_prev`, simulate `nt` steps
 
     # Advance the wave for `nt` steps
     for step in 1:nt
-        # TODO: Complete operations in this loop 
+        p_center      = p_cur[i, j]
+        p_prev_center = p_prev[i, j]
+
+        p_down  = p_prev[i, torus_index(j, -1, m)]
+        p_up    = p_prev[i, torus_index(j,  1, m)]
+        p_left  = p_prev[torus_index(i, -1, n), j]
+        p_right = p_prev[torus_index(i,  1, n), j]
+
+        p_next = update_pressure(p_center, p_prev_center, p_left, p_right, p_down, p_up)
+         @synchronize()
+        # Update p_prev  and p_cur
+        p_prev[i, j] = p_cur[i, j]
+        p_cur[i, j]  = p_next
+        @synchronize()
     end
 end
 
